@@ -1,0 +1,116 @@
+>use ecommerce
+switched to db ecommerce
+> db.mensajes.insert([{email: "ricardo@gmail.com", texto:"Hola, me llamo Ricardo", fecha: ISODate()},
+...  {email: "raul@gmail.com", texto:"Hola, me llamo Raul", fecha: ISODate()},
+...  {email: "carlos@gmail.com", texto:"Hola, me llamo Carlos", fecha: ISODate()},
+...  {email: "saul@gmail.com", texto:"Hola, me llamo Saul", fecha: ISODate()},
+...  {email: "jorge@gmail.com", texto:"Hola, me llamo Jorge", fecha: ISODate()},
+... {email: "rafael@gmail.com", texto:"Hola, me llamo Rafael", fecha: ISODate()},
+...  {email: "nestor@gmail.com", texto:"Hola, me llamo Nestor", fecha: ISODate()},
+... {email: "cristina@gmail.com", texto:"Hola, me llamo Cristina", fecha: ISODate()},
+...  {email: "alberto@gmail.com", texto:"Hola, me llamo Alberto", fecha: ISODate()},
+...  {email: "juan@gmail.com", texto:"Hola, me llamo Juan", fecha: ISODate()}])
+BulkWriteResult({
+        "writeErrors" : [ ],
+        "writeConcernErrors" : [ ],
+        "nInserted" : 10,
+        "nUpserted" : 0,
+        "nMatched" : 0,
+        "nModified" : 0,
+        "nRemoved" : 0,
+        "upserted" : [ ]
+})
+> db.productos.insert([{titulo: "Zapatillas", precio: 3350, url:"http://zapatillas.com"},
+... {titulo: "Harina", precio: 120, url:"http://harina.com"},
+... {titulo: "Lenteja", precio: 580, url:"http://lenteja.com"},
+... {titulo: "Televisor", precio: 4320, url:"http://televisor.com"},
+... {titulo: "Remera", precio: 900, url:"http://remera.com"},
+... {titulo: "Taza", precio: 1280, url:"http://taza.com"},
+... {titulo: "Cenicero", precio: 2860, url:"http://cenicero.com"},
+... {titulo: "Lavarropa", precio: 4990, url:"http://lavarropa.com"},
+... {titulo: "Lapicera", precio: 1700, url:"http://lapicera.com"},
+... {titulo: "Libro", precio: 2300, url:"http://libro.com"}])
+BulkWriteResult({
+        "writeErrors" : [ ],
+        "writeConcernErrors" : [ ],
+        "nInserted" : 10,
+        "nUpserted" : 0,
+        "nMatched" : 0,
+        "nModified" : 0,
+        "nRemoved" : 0,
+        "upserted" : [ ]
+})
+> db.mensajes.find()
+{ "_id" : ObjectId("616f0043cd1cacca6e4facda"), "email" : "ricardo@gmail.com", "texto" : "Hola, me llamo Ricardo", "fecha" : ISODate("2021-10-19T17:28:35.605Z") }
+{ "_id" : ObjectId("616f0043cd1cacca6e4facdb"), "email" : "raul@gmail.com", "texto" : "Hola, me llamo Raul", "fecha" : ISODate("2021-10-19T17:28:35.605Z") }
+{ "_id" : ObjectId("616f0043cd1cacca6e4facdc"), "email" : "carlos@gmail.com", "texto" : "Hola, me llamo Carlos", "fecha" : ISODate("2021-10-19T17:28:35.605Z") }
+{ "_id" : ObjectId("616f0043cd1cacca6e4facdd"), "email" : "saul@gmail.com", "texto" : "Hola, me llamo Saul", "fecha" : ISODate("2021-10-19T17:28:35.605Z") }
+{ "_id" : ObjectId("616f0043cd1cacca6e4facde"), "email" : "jorge@gmail.com", "texto" : "Hola, me llamo Jorge", "fecha" : ISODate("2021-10-19T17:28:35.605Z") }
+{ "_id" : ObjectId("616f0043cd1cacca6e4facdf"), "email" : "rafael@gmail.com", "texto" : "Hola, me llamo Rafael", "fecha" : ISODate("2021-10-19T17:28:35.605Z") }
+{ "_id" : ObjectId("616f0043cd1cacca6e4face0"), "email" : "nestor@gmail.com", "texto" : "Hola, me llamo Nestor", "fecha" : ISODate("2021-10-19T17:28:35.605Z") }
+{ "_id" : ObjectId("616f0043cd1cacca6e4face1"), "email" : "cristina@gmail.com", "texto" : "Hola, me llamo Cristina", "fecha" : ISODate("2021-10-19T17:28:35.607Z") }
+{ "_id" : ObjectId("616f0043cd1cacca6e4face2"), "email" : "alberto@gmail.com", "texto" : "Hola, me llamo Alberto", "fecha" : ISODate("2021-10-19T17:28:35.607Z") }
+{ "_id" : ObjectId("616f0043cd1cacca6e4face3"), "email" : "juan@gmail.com", "texto" : "Hola, me llamo Juan", "fecha" : ISODate("2021-10-19T17:28:35.607Z") }
+> db.productos.find()
+{ "_id" : ObjectId("616f0052cd1cacca6e4face4"), "titulo" : "Zapatillas", "precio" : 3350, "url" : "http://zapatillas.com" }
+{ "_id" : ObjectId("616f0052cd1cacca6e4face5"), "titulo" : "Harina", "precio" : 120, "url" : "http://harina.com" }
+{ "_id" : ObjectId("616f0052cd1cacca6e4face6"), "titulo" : "Lenteja", "precio" : 580, "url" : "http://lenteja.com" }
+{ "_id" : ObjectId("616f0052cd1cacca6e4face7"), "titulo" : "Televisor", "precio" : 4320, "url" : "http://televisor.com" }
+{ "_id" : ObjectId("616f0052cd1cacca6e4face8"), "titulo" : "Remera", "precio" : 900, "url" : "http://remera.com" }
+{ "_id" : ObjectId("616f0052cd1cacca6e4face9"), "titulo" : "Taza", "precio" : 1280, "url" : "http://taza.com" }
+{ "_id" : ObjectId("616f0052cd1cacca6e4facea"), "titulo" : "Cenicero", "precio" : 2860, "url" : "http://cenicero.com" }
+{ "_id" : ObjectId("616f0052cd1cacca6e4faceb"), "titulo" : "Lavarropa", "precio" : 4990, "url" : "http://lavarropa.com" }
+{ "_id" : ObjectId("616f0052cd1cacca6e4facec"), "titulo" : "Lapicera", "precio" : 1700, "url" : "http://lapicera.com" }
+{ "_id" : ObjectId("616f0052cd1cacca6e4faced"), "titulo" : "Libro", "precio" : 2300, "url" : "http://libro.com" }
+> db.mensajes.count()
+10
+> db.productos.count()
+10
+> db.productos.insert({"titulo" : "Secadora", "precio" : 2590, "url" : "http://secadora.com"})
+WriteResult({ "nInserted" : 1 })
+> db.productos.find({precio:{$lt:1000}})
+{ "_id" : ObjectId("616f0052cd1cacca6e4face5"), "titulo" : "Harina", "precio" : 120, "url" : "http://harina.com" }
+{ "_id" : ObjectId("616f0052cd1cacca6e4face6"), "titulo" : "Lenteja", "precio" : 580, "url" : "http://lenteja.com" }
+{ "_id" : ObjectId("616f0052cd1cacca6e4face8"), "titulo" : "Remera", "precio" : 900, "url" : "http://remera.com" }
+> db.productos.find({precio:{$gte: 1000, $lte: 3000}})
+{ "_id" : ObjectId("616f0052cd1cacca6e4face9"), "titulo" : "Taza", "precio" : 1280, "url" : "http://taza.com" }
+{ "_id" : ObjectId("616f0052cd1cacca6e4facea"), "titulo" : "Cenicero", "precio" : 2860, "url" : "http://cenicero.com" }
+{ "_id" : ObjectId("616f0052cd1cacca6e4facec"), "titulo" : "Lapicera", "precio" : 1700, "url" : "http://lapicera.com" }
+{ "_id" : ObjectId("616f0052cd1cacca6e4faced"), "titulo" : "Libro", "precio" : 2300, "url" : "http://libro.com" }
+{ "_id" : ObjectId("616f00c8cd1cacca6e4facee"), "titulo" : "Secadora", "precio" : 2590, "url" : "http://secadora.com" }
+> db.productos.find({precio:{$gt: 3000}})
+{ "_id" : ObjectId("616f0052cd1cacca6e4face4"), "titulo" : "Zapatillas", "precio" : 3350, "url" : "http://zapatillas.com" }
+{ "_id" : ObjectId("616f0052cd1cacca6e4face7"), "titulo" : "Televisor", "precio" : 4320, "url" : "http://televisor.com" }
+{ "_id" : ObjectId("616f0052cd1cacca6e4faceb"), "titulo" : "Lavarropa", "precio" : 4990, "url" : "http://lavarropa.com" }
+> db.productos.find().skip(2).limit(1).sort({precio:1})
+{ "_id" : ObjectId("616f0052cd1cacca6e4face8"), "titulo" : "Remera", "precio" : 900, "url" : "http://remera.com" }
+> db.productos.update(
+...   {},
+...   { $set: {stock: 100} },
+...   false,
+...   true
+... )
+WriteResult({ "nMatched" : 11, "nUpserted" : 0, "nModified" : 11 })
+> db.productos.update({precio:{$gt:4000}}, {$set:{stock: 0} }, {multi: true})
+WriteResult({ "nMatched" : 2, "nUpserted" : 0, "nModified" : 2 })
+> db.productos.deleteMany( {precio: {$lt:1000}} )
+{ "acknowledged" : true, "deletedCount" : 3 }
+> db.productos.find()
+{ "_id" : ObjectId("616f0052cd1cacca6e4face4"), "titulo" : "Zapatillas", "precio" : 3350, "url" : "http://zapatillas.com", "stock" : 100 }
+{ "_id" : ObjectId("616f0052cd1cacca6e4face7"), "titulo" : "Televisor", "precio" : 4320, "url" : "http://televisor.com", "stock" : 0 }
+{ "_id" : ObjectId("616f0052cd1cacca6e4face9"), "titulo" : "Taza", "precio" : 1280, "url" : "http://taza.com", "stock" : 100 }
+{ "_id" : ObjectId("616f0052cd1cacca6e4facea"), "titulo" : "Cenicero", "precio" : 2860, "url" : "http://cenicero.com", "stock" : 100 }
+{ "_id" : ObjectId("616f0052cd1cacca6e4faceb"), "titulo" : "Lavarropa", "precio" : 4990, "url" : "http://lavarropa.com", "stock" : 0 }
+{ "_id" : ObjectId("616f0052cd1cacca6e4facec"), "titulo" : "Lapicera", "precio" : 1700, "url" : "http://lapicera.com", "stock" : 100 }
+{ "_id" : ObjectId("616f0052cd1cacca6e4faced"), "titulo" : "Libro", "precio" : 2300, "url" : "http://libro.com", "stock" : 100 }
+{ "_id" : ObjectId("616f00c8cd1cacca6e4facee"), "titulo" : "Secadora", "precio" : 2590, "url" : "http://secadora.com", "stock" : 100 }
+>db.createUser({user: "pepe", pwd:"asd456", roles:[{role:'read', db:'ecommerce'}]})
+Successfully added user: {
+        "user" : "pepe",
+        "roles" : [
+                {
+                        "role" : "read",
+                        "db" : "ecommerce"
+                }
+        ]
+}
